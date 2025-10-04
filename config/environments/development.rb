@@ -1,5 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # Allow Codio box URL in development
+  config.hosts << "#{ENV['CODIO_HOSTNAME']}-3000.codio.io" if ENV['CODIO_HOSTNAME'].present?
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
